@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="minesweeper-styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <button id="backBtn" class="nav-button">← Back to Games</button>
+            <h1>Minesweeper</h1>
+        </div>
+        
+        <div class="game-area">
+            <div class="game-header">
+                <div class="mine-count">
+                    <span class="icon">💣</span>
+                    <span id="mineCount">0</span>
+                </div>
+                <button id="newGameBtn">New Game</button>
+                <div class="timer">
+                    <span class="icon">⏱️</span>
+                    <span id="timer">0</span>
+                </div>
+            </div>
+            
+            <div class="difficulty-selector">
+                <button class="difficulty-btn active" data-difficulty="beginner">Beginner</button>
+                <button class="difficulty-btn" data-difficulty="intermediate">Intermediate</button>
+                <button class="difficulty-btn" data-difficulty="expert">Expert</button>
+            </div>
+            
+            <div id="gameBoard" class="game-board"></div>
+            
+            <div class="controls-hint">
+                <p>Left Click: Reveal • Right Click: Flag</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <h2 id="gameOverText"></h2>
+            <p>Time: <span id="finalTime">0</span> seconds</p>
+            <button id="restartBtn">Play Again</button>
+        </div>
+    </div>
+    
+    <script src="minesweeper-script.js"></script>
+</body>
+</html> 
